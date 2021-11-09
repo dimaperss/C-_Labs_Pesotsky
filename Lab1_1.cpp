@@ -23,16 +23,16 @@ class Stock{
     public:
 
     void Acquire(){
-        cout << "Ââåäèòå íàçâàíèå êîìïàíèè: " << endl;
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã Ã§Ã¢Ã Ã­Ã¨Ã¥ ÃªÃ®Ã¬Ã¯Ã Ã­Ã¨Ã¨: " << endl;
         cin >> company_name;
 
-        cout << "Êîëè÷åñòâî àêöèé â ïàêåòå ïåðâîíà÷àëüíîãî âêëàäà: " << endl;
+        cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã ÃªÃ¶Ã¨Ã© Ã¢ Ã¯Ã ÃªÃ¥Ã²Ã¥ Ã¯Ã¥Ã°Ã¢Ã®Ã­Ã Ã·Ã Ã«Ã¼Ã­Ã®Ã£Ã® Ã¢ÃªÃ«Ã Ã¤Ã : " << endl;
         cin >> stock_num;
 
-        cout << "Ââåäèòå ñòîèìîñòü êàæäîé àêöèè: " << endl;
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã²Ã®Ã¨Ã¬Ã®Ã±Ã²Ã¼ ÃªÃ Ã¦Ã¤Ã®Ã© Ã ÃªÃ¶Ã¨Ã¨: " << endl;
         for (int i = 0; i < stock_num; i++){
             int s_cost;
-            cout << "Àêöèÿ íîìåð " << i + 1 << ": ";
+            cout << "Ã€ÃªÃ¶Ã¨Ã¿ Ã­Ã®Ã¬Ã¥Ã° " << i + 1 << ": ";
             cin >> s_cost;
             stock_cost_array.push_back(s_cost);
         }
@@ -44,7 +44,7 @@ class Stock{
         if (s_num > 0){
             float s_cost;
             for (int i = 0; i < s_num; i++){
-                cout << "Öåíà ïðèîáðåò¸ííîé àêöèè ¹" << i + 1 << ": ";
+                cout << "Ð·Ñ‰Ð³Ñ€Ñ‰Ð½Ñ‰Ð³Ð½Ð¿Ñ‰Ð³Ð¿Ð½ Â¹" << i + 1 << ": ";
                 cin >> s_cost;
                 stock_cost_array.push_back(s_cost);
                 stock_num++;
@@ -60,7 +60,7 @@ class Stock{
         if (s_num > 0){
             int ndx;
             for (int i = 0; i < s_num; i++){
-                cout << "Íîìåð ïðîäàííîé àêöèè: ";
+                cout << "ÃÃ®Ã¬Ã¥Ã° Ã¯Ã°Ã®Ã¤Ã Ã­Ã­Ã®Ã© Ã ÃªÃ¶Ã¨Ã¨: ";
                 cin >> ndx;
                 for (int i = ndx; i < stock_num - 1; i++){
                     stock_cost_array[i] = stock_cost_array[i + 1];
@@ -81,9 +81,9 @@ class Stock{
     }
 
     void Show(){
-        cout << "Íàçâàíèå êîìïàíèè: " << setw(1) << company_name << endl;
-        cout << "Îáùåå êîëè÷åñòâî àêöèé: " << setw(1) << stock_num << endl;
-        cout << "Îáùàÿ ñòîèìîñòü âñåõ àêöèé: " << setw(1) << all_stock_cost << endl;
+        cout << "Ñ€Ð°Ñ‚Ð°Ñ‚Ð°Ñ‚: " << setw(1) << company_name << endl;
+        cout << "Ð¿Ð°Ñ€Ð°Ñ€Ð°: " << setw(1) << stock_num << endl;
+        cout << "Ð¸ÑƒÑ€Ð¿Ñ€Ð½Ð¿Ð»Ð´Ð³: " << setw(1) << all_stock_cost << endl;
     }
 };
 
